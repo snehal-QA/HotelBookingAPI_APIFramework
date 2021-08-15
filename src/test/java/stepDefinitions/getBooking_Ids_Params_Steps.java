@@ -24,6 +24,7 @@ public class getBooking_Ids_Params_Steps {
 	@When("user access the getbookings endpoint")
 	public void user_access_the_getbookings_endpoint() {
 	   response=Endpoints.getBookingIds();
+	   GenericResponse_Steps.response=response;
 	}
 
 	@When("User access getbookings endpoint to search booking using {string} and {string}")
@@ -38,7 +39,7 @@ public class getBooking_Ids_Params_Steps {
 	   JsonPath js= new JsonPath(response.asString());
 	   int count=js.getInt("$.size()");
 	   System.out.println("Count of items is: "+count);
-	   assertEquals(expectednoofbookings, count);
+	   assertEquals(Integer.parseInt(expectednoofbookings),count);
 	}
 
 }

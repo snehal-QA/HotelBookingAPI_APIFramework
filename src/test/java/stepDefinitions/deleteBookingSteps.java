@@ -18,24 +18,25 @@ import resources.apiResources;
 public class deleteBookingSteps {
 	
 
-	List<Integer> ids=new ArrayList<Integer>();
+	//List<Integer> ids=new ArrayList<Integer>();
+	int ids;
 	Response response;	
 	
 	@When("user deletes the booking using DeleteBooking endpoint with id")
 	public void user_deletes_the_booking_using_delete_booking_endpoint_with_id() {
-		ids=generic_Steps.bookingids;
-		   List<Response> r1=ids.stream().map(j -> Endpoints.deleteBooking(j)).collect(Collectors.toList());
-		   GenericResponse_Steps.response=r1.get(0);
+		ids=generic_Steps.bookingid;
+		response=Endpoints.deleteBooking(ids);
+		  // List<Response> r1=ids.stream().map(j -> Endpoints.deleteBooking(j)).collect(Collectors.toList());
+		   //GenericResponse_Steps.response=r1.get(0);
 		   System.out.println("ID PRINGING ******************************");
-		   ids.stream().forEach(System.out::println);
-		   response=r1.get(0);
-		   
-		
+		  // ids.stream().forEach(System.out::println);
+		  // response=r1.get(0);	
 	}
 
 	@Then("booking no longer exists in system with status code {int}")
 	public void booking_no_longer_exists_in_system(int expectedstatus) {
-	    response=Endpoints.getBooking(ids.get(0));
+	    //response=Endpoints.getBooking(ids.get(0));
+	    response=Endpoints.getBooking(ids);
 	   // ids.remove(0);
 	    assertEquals(expectedstatus, response.getStatusCode());
 	}
@@ -58,12 +59,13 @@ public class deleteBookingSteps {
 	
 	@When("Unauthoriozed user deletes created booking via Delete Booking endpoint")
 	public void unauthoriozed_user_deletes_created_booking_via_delete_booking_endpoint() {
-		ids=generic_Steps.bookingids;
+		//ids=generic_Steps.bookingids;
+		ids=generic_Steps.bookingid;
 		apiResources resource=apiResources.valueOf("DeleteBooking");
 		RestAssured.baseURI="https://restful-booker.herokuapp.com";
 		response=RestAssured.given()
 				//.accept(ContentType.JSON)
-				.pathParam("id",ids.get(0))
+				.pathParam("id",ids)
 				.when()
 				.delete(resource.getResource());
 		response.then().log().all();

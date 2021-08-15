@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: cucumber.Options.RunCucumberTests
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.904 s <<< FAILURE! - in cucumber.Options.RunCucumberTests
+Retreives all bookings for user based on provided parameters.User calls a webservice to get all booking ids  Time elapsed: 0.042 s  <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'the count of bookingids > 0' is undefined.
+You can implement this step using the snippet(s) below:
+
+@Then("the count of bookingids > {int}")
+public void the_count_of_bookingids(Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

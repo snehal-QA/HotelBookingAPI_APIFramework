@@ -14,7 +14,7 @@ public class utils {
 		  String resp=response.asString();
 		  System.out.println(resp);
 		  JsonPath   js = new JsonPath(resp);
-		  System.out.println(js.get(key).toString());
+		  //System.out.println(js.get(key).toString());
 		  return js.get(key).toString();
 	}
     

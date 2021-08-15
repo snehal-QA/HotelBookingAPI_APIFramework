@@ -16,13 +16,13 @@ import pojo.requestPayload.createTokenRequest;
 
 public class generic_Steps {
 	
-	public static List<Integer> bookingids=new ArrayList<Integer>();
+	public static int bookingid;
 	public static String token;
 	@Given("we create test data as follows:")
 	public void we_create_booking_data_as_follows(DataTable dataTable) {
 		
 		createBookingRequest requestbody;
-		bookingids.clear();
+		//bookingids.clear();
 		Response response;
 		//Reading the datatable as key:columnname &value:columnvalue
 		 List<Map<String,String>> data = dataTable.asMaps(String.class, String.class);
@@ -35,12 +35,14 @@ public class generic_Steps {
 					 data.get(i).get("checkin"), data.get(i).get("checkout"), data.get(i).get("additionalneeds"));
 			 response=Endpoints.createBooking(requestbody);
 			 //Collect all booking ids 
-			 bookingids.add(Integer.parseInt(utils.getJsonPath(response,"bookingid")));		 
+			 bookingid=Integer.parseInt(utils.getJsonPath(response,"bookingid"));
+			 //bookingids.add(Integer.parseInt(utils.getJsonPath(response,"bookingid")));	
+			 
 		 }
 	}
 	
 	@Given("I am authorized user")
-	public void user_is_authorized() throws IOException {
+	public static void user_is_authorized() throws IOException {
 		Response response;
 		createTokenRequest tokenpayload=new createTokenRequest();
 		

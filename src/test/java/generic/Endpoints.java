@@ -14,14 +14,6 @@ import stepDefinitions.generic_Steps;
 public class Endpoints {
 	
 	private static final String BaseURL="https://restful-booker.herokuapp.com";
-	
-//	private static final String AuthEndpoint="/auth";
-//	private static final String CreateBookingEndpoint="/booking";
-//	private static final String GetBooking="/booking/{id}";
-//	private static final String GetBookingIds="/booking";
-//	private static final String PartialUpdateBooking="/booking/{id}";
-//	private static final String DeleteBooking="/booking/{id}";
-
 		
 	//Auth Endpoint
 	public static Response authenticateUser(createTokenRequest createtoken) {
@@ -38,7 +30,7 @@ public class Endpoints {
 		apiResources resource=apiResources.valueOf("CreateBookingEndpoint");
         RestAssured.baseURI = BaseURL;
         RequestSpecification request = RestAssured.given();
-        request.contentType("application/json");
+        request.contentType("application/json").log().all();
         Response response = request.body(createbookingdata).post(resource.getResource());
         return response;
     }
@@ -90,7 +82,7 @@ public class Endpoints {
 		
 		RestAssured.baseURI=Endpoints.BaseURL;
 		Response response=RestAssured.given()
-				.queryParams(queryparam).log().all()
+				.queryParams(queryparam)
 				.when()
 				.get(resource.getResource());
 		return response;		
@@ -113,16 +105,18 @@ public class Endpoints {
 	}
 	
 //	//PartialUpdateBookingEndpoint
-//	public static Response partialupdateBooking(,int bookingid)
-//	{
-//		RestAssured.baseURI=Endpoints.BaseURL;
+	public static RequestSpecification partialupdateBooking(int bookingid)
+	{
+		apiResources resource=apiResources.valueOf("PartialUpdateBooking");
+		RestAssured.baseURI=Endpoints.BaseURL;
+		RequestSpecification request= RestAssured.given().pathParam("id",bookingid);
 //		Response response=RestAssured.given()
-//				//.accept(ContentType.JSON)
+//			//.accept(ContentType.JSON)
 //				.pathParam("id",bookingid).log().all()
 //				.when()
-//				.delete(DeleteBooking);
-//		return response;	
-//	}
+//				.patch(resource.getResource());
+		return request;	
+    }
 	
 
 }

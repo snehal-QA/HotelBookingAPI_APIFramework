@@ -23,23 +23,12 @@ public class getBooking_ByIdSteps {
 	
 	@When("user hits GetBooking endpoint with id")
 	public void user_hits_endpoint_with() {
-		List<Integer> bookingid=new ArrayList<Integer>();
-		bookingid=generic_Steps.bookingids;
-		System.out.println("In getdetailby id method id is: "+bookingid.get(0));
-		System.out.println("ID PRINGING getbooking******************************");
-		   bookingid.stream().forEach(System.out::println);
-		response=Endpoints.getBooking(bookingid.get(0));
+		bookingid=generic_Steps.bookingid;
+		response=Endpoints.getBooking(bookingid);
 		response.then().log().all();
 		GenericResponse_Steps.response=response;
 	}
 			  
-	@Then("response contains following values")
-	public void response_contains_following_values(DataTable dataTable) {
-		Map<String,String> expectedkeyvalues=dataTable.asMap(String.class, String.class);
-		assertEquals(utils.getJsonPath(response,"firstname"),expectedkeyvalues.get("firstname"));
-		assertEquals(utils.getJsonPath(response,"lastname"),expectedkeyvalues.get("lastname"));
-	}
-	
 	
 }
 	

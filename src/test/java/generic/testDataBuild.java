@@ -1,6 +1,11 @@
 package generic;
 
 import java.io.IOException;
+import java.time.LocalDate;
+
+import com.github.javafaker.Faker;
+import com.github.javafaker.Food;
+import com.github.javafaker.Number;
 
 import pojo.requestPayload.Bookingdates;
 import pojo.requestPayload.createBookingRequest;
@@ -24,5 +29,6 @@ public class testDataBuild {
 		requestbody.setTotalprice(totalprice);
 		return requestbody;	
 	}
+
 	
 }
