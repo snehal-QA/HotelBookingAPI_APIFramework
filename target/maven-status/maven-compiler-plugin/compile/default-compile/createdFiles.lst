@@ -1,0 +1,5 @@
+resources\apiResources.class
+pojo\requestPayload\Bookingdates.class
+pojo\requestPayload\createTokenRequest.class
+pojo\requestPayload\createBookingRequest.class
+pojo\responsePayload\createBookingResponse.class
