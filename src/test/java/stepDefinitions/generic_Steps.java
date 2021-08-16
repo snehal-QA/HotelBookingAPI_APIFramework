@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import generic.Endpoints;
+import generic.log;
 import generic.testDataBuild;
 import generic.utils;
 import io.cucumber.datatable.DataTable;
@@ -52,6 +53,7 @@ public class generic_Steps {
 		response=Endpoints.authenticateUser(tokenpayload);
 		System.out.println("............"+response.asString());
 		token=utils.getJsonPath(response,"token");
+		log.info("User Token Authorized");
 	}
 
 }

@@ -1,5 +1,6 @@
 stepDefinitions\getBooking_Ids_Params_Steps.class
 stepDefinitions\generic_Steps.class
+generic\log.class
 stepDefinitions\GenericResponse_Steps.class
 stepDefinitions\createBookingSteps.class
 stepDefinitions\Hooks.class
@@ -8,4 +9,5 @@ cucumber\Options\RunCucumberTests.class
 stepDefinitions\getBooking_ByIdSteps.class
 stepDefinitions\deleteBookingSteps.class
 generic\testDataBuild.class
+stepDefinitions\partialUpdate_Steps.class
 generic\Endpoints.class

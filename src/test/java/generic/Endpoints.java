@@ -11,6 +11,8 @@ import pojo.requestPayload.createTokenRequest;
 import resources.apiResources;
 import stepDefinitions.generic_Steps;
 
+/*---Single point for all HTTP methods used across for performing GET,POST,PATCH,DELETE operations--- */
+/*----Returns response for HTTP methods; only exception is PATCH method which returns request spec for further operations------*/
 public class Endpoints {
 	
 	private static final String BaseURL="https://restful-booker.herokuapp.com";
@@ -18,7 +20,6 @@ public class Endpoints {
 	//Auth Endpoint
 	public static Response authenticateUser(createTokenRequest createtoken) {
 		apiResources resource=apiResources.valueOf("AuthEndpoint");
-		RestAssured.baseURI = BaseURL;
         RequestSpecification request = RestAssured.given();
         request.header("Content-Type", "application/json");
         Response response = request.body(createtoken).post(resource.getResource());
@@ -28,7 +29,6 @@ public class Endpoints {
 	//CreateBookingEndpoint
 	public static Response createBooking(createBookingRequest createbookingdata) {
 		apiResources resource=apiResources.valueOf("CreateBookingEndpoint");
-        RestAssured.baseURI = BaseURL;
         RequestSpecification request = RestAssured.given();
         request.contentType("application/json").log().all();
         Response response = request.body(createbookingdata).post(resource.getResource());
@@ -39,7 +39,6 @@ public class Endpoints {
 	public static Response getBooking(int bookingid)
 	{
 		apiResources resource=apiResources.valueOf("GetBooking");
-		RestAssured.baseURI=Endpoints.BaseURL;
 		Response response=RestAssured.given()
 				//.accept(ContentType.JSON)
 				.pathParam("id",bookingid).log().all()
@@ -52,7 +51,6 @@ public class Endpoints {
 	public static Response getBookingIds()
 	{
 		apiResources resource=apiResources.valueOf("GetBookingIds");
-		RestAssured.baseURI=Endpoints.BaseURL;
 		Response response=RestAssured.given()
 				//.accept(ContentType.JSON)
 				.when()
@@ -70,7 +68,7 @@ public class Endpoints {
 			 String parameters[]=parameter.split("&");
 			 String values[]=value.split("&");
 			 int i;
-			 for(i=0;i<=parameters.length;i++)
+			 for(i=0;i<parameters.length;i++)
 			 {
 				 queryparam.put(parameters[i], values[i]);
 			 }
@@ -79,10 +77,9 @@ public class Endpoints {
 		{
 			queryparam.put(parameter, value);
 		}
-		
-		RestAssured.baseURI=Endpoints.BaseURL;
 		Response response=RestAssured.given()
 				.queryParams(queryparam)
+				.log().all()
 				.when()
 				.get(resource.getResource());
 		return response;		
@@ -92,7 +89,6 @@ public class Endpoints {
 	public static Response deleteBooking(int bookingid)
 	{
 		apiResources resource=apiResources.valueOf("DeleteBooking");
-		RestAssured.baseURI=Endpoints.BaseURL;
 		String token_cookie="token=" + generic_Steps.token;
 		Response response=RestAssured.given()
 				//.accept(ContentType.JSON)
@@ -108,13 +104,7 @@ public class Endpoints {
 	public static RequestSpecification partialupdateBooking(int bookingid)
 	{
 		apiResources resource=apiResources.valueOf("PartialUpdateBooking");
-		RestAssured.baseURI=Endpoints.BaseURL;
-		RequestSpecification request= RestAssured.given().pathParam("id",bookingid);
-//		Response response=RestAssured.given()
-//			//.accept(ContentType.JSON)
-//				.pathParam("id",bookingid).log().all()
-//				.when()
-//				.patch(resource.getResource());
+		RequestSpecification request= RestAssured.given().pathParam("id",bookingid);;
 		return request;	
     }
 	

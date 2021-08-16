@@ -1,3 +1,4 @@
+@Regression
 Feature: Delete booking of user
 
   Background: Creates TestData for testing scenarios

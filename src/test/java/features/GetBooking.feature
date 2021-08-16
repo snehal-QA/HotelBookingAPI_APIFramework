@@ -1,3 +1,4 @@
+@Regression
 Feature: Retreives Booking deatils for a booking
 
   @DeleteTestData

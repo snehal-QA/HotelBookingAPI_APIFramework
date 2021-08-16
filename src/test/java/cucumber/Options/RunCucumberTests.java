@@ -5,7 +5,9 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/java/features",
+@CucumberOptions(
+	tags = "@Regression",
+	features="src/test/java/features",
 	plugin ="html:target/jsonReports/cucumber-report.html"
 	,glue= {"stepDefinitions"}
 	,dryRun = true)

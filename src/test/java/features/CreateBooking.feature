@@ -1,6 +1,6 @@
 Feature: Creates a new booking
 
-  @regression
+  @Regression
   Scenario Outline: User can create a booking
     Given User enters information "<firstname>" "<lastname>" <totalprice> "<depositpaid>" "<checkin>" "<checkout>" "<additionalneeds>"
     When user creates a booking using CreateBookingEndpoint

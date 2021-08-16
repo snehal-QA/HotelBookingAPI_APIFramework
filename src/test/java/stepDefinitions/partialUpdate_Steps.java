@@ -7,6 +7,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import generic.Endpoints;
+import generic.log;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import pojo.requestPayload.Bookingdates;
@@ -19,6 +20,7 @@ public class partialUpdate_Steps {
 	
 	@When("user updates the booking details {string} and {string}")
 	public void user_updates_the_booking_details_and(String parameter, String value) throws JsonProcessingException {
+		log.startTestCase(" Partial update booking details ");
 		apiResources resource=apiResources.valueOf("PartialUpdateBooking");
 		
 		String token_cookie="token=" + generic_Steps.token;
@@ -46,14 +48,18 @@ public class partialUpdate_Steps {
 			}
 		else
 		{
-			queryparam.put(parameter, value);
+			if(parameter.equals("depositpaid")) {
+				queryparam.put(parameter, Boolean.valueOf(value));
+			}
+			else {
+					queryparam.put(parameter, value);
+			}
 			partial_upd_body=objectMapper.writeValueAsString(queryparam);
 		}
 		
-		System.out.println(bookingdate.equals(null) + "checkin g.df.dsfadsfdsfadsfadsfdsaf88838488**********" + bookingdate.getCheckin());
 		
 
-	 if(bookingdate.getCheckin() != " " && bookingdate.getCheckout() != " " ) {
+	 if(bookingdate.getCheckin() == null && bookingdate.getCheckout() == null ) {
 	
 		response=Endpoints.partialupdateBooking(generic_Steps.bookingid)
 				.header("Content-Type", "application/json")
@@ -83,6 +89,9 @@ public class partialUpdate_Steps {
 		System.out.println("&&&&***********         partial response   ************* &&&&\n" + response.asString() );
 		
 		GenericResponse_Steps.response=response;
+		log.info(" Response : ");
+		log.info(response.asPrettyString());
+		log.endTestCase(" Partial update booking details completed ");
 	}
 
 }

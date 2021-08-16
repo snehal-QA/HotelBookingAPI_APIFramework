@@ -1,0 +1,201 @@
+2021-44-16 02:44:40.605 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-44-16 02:44:40.608 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ Create Booking Started $$$$$$$$$$
+2021-44-16 02:44:42.520 [main] INFO  org.apache.commons.logging.Log - ----------Create Booking Response----------
+2021-44-16 02:44:42.536 [main] INFO  org.apache.commons.logging.Log - ----------{
+    "bookingid": 13,
+    "booking": {
+        "firstname": "Faker",
+        "lastname": "Brown",
+        "totalprice": 111,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2018-01-01",
+            "checkout": "2019-01-01"
+        },
+        "additionalneeds": "Breakfast"
+    }
+}----------
+2021-44-16 02:44:42.537 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ Booking Created $$$$$$$$$$
+2021-44-16 02:44:42.537 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-45-16 02:45:36.540 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-45-16 02:45:36.543 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-45-16 02:45:36.543 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ Delete Booking Started $$$$$$$$$$
+2021-45-16 02:45:38.098 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-45-16 02:45:38.099 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-45-16 02:45:38.099 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ Delete Booking Started $$$$$$$$$$
+2021-45-16 02:45:38.597 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-45-16 02:45:38.597 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ Delete Booking Started $$$$$$$$$$
+2021-45-16 02:45:39.088 [main] WARN  org.apache.commons.logging.Log - **********User trying to delete non-existing booking**********
+2021-45-16 02:45:39.629 [main] FATAL org.apache.commons.logging.Log - !!!!!!!!!!Unauthoriozed user trying to delete booking!!!!!!!!!!
+2021-45-16 02:45:40.125 [main] FATAL org.apache.commons.logging.Log - !!!!!!!!!!Response Status : HTTP/1.1 403 Forbidden!!!!!!!!!!
+2021-45-16 02:45:40.127 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ Delete Booking Finished $$$$$$$$$$
+2021-45-16 02:45:40.127 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-45-16 02:45:40.131 [main] WARN  org.apache.commons.logging.Log - **********Status message : HTTP/1.1 403 Forbidden**********
+2021-52-16 02:52:10.332 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-52-16 02:52:10.336 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-52-16 02:52:10.336 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ Delete Booking Started $$$$$$$$$$
+2021-52-16 02:52:11.366 [main] INFO  org.apache.commons.logging.Log - ----------Booking does not exist 404----------
+2021-52-16 02:52:11.366 [main] WARN  org.apache.commons.logging.Log - **********Status message : HTTP/1.1 404 Not Found**********
+2021-52-16 02:52:12.392 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-52-16 02:52:12.393 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-52-16 02:52:12.393 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ Delete Booking Started $$$$$$$$$$
+2021-52-16 02:52:12.886 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-52-16 02:52:12.886 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ Delete Booking Started $$$$$$$$$$
+2021-52-16 02:52:13.379 [main] WARN  org.apache.commons.logging.Log - **********User trying to delete non-existing booking**********
+2021-52-16 02:52:13.381 [main] WARN  org.apache.commons.logging.Log - **********Status message : HTTP/1.1 405 Method Not Allowed**********
+2021-52-16 02:52:13.896 [main] FATAL org.apache.commons.logging.Log - !!!!!!!!!!Unauthoriozed user trying to delete booking!!!!!!!!!!
+2021-52-16 02:52:14.388 [main] FATAL org.apache.commons.logging.Log - !!!!!!!!!!Response Status : HTTP/1.1 403 Forbidden!!!!!!!!!!
+2021-52-16 02:52:14.388 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ Delete Booking Finished $$$$$$$$$$
+2021-52-16 02:52:14.388 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-52-16 02:52:14.389 [main] WARN  org.apache.commons.logging.Log - **********Status message : HTTP/1.1 403 Forbidden**********
+2021-52-16 02:52:40.715 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-52-16 02:52:40.718 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ GetBooking with id $$$$$$$$$$
+2021-52-16 02:52:41.252 [main] INFO  org.apache.commons.logging.Log - ----------Response : 
+{
+    "firstname": "Harry",
+    "lastname": "Potter",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
+}----------
+2021-52-16 02:52:41.253 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ GetBooking with id $$$$$$$$$$
+2021-52-16 02:52:41.253 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-52-16 02:52:41.777 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-52-16 02:52:52.799 [main] INFO  org.apache.commons.logging.Log - ---------- GetBookings by firstname----------
+2021-52-16 02:52:52.841 [main] INFO  org.apache.commons.logging.Log - ----------Count of booking 1----------
+2021-52-16 02:52:53.362 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-52-16 02:52:53.877 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-52-16 02:52:53.877 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  GetBookings by paramenter  $$$$$$$$$$
+2021-52-16 02:52:54.380 [main] INFO  org.apache.commons.logging.Log - ----------Count of booking 11----------
+2021-52-16 02:52:54.873 [main] INFO  org.apache.commons.logging.Log - ---------- GetBookings by firstname----------
+2021-52-16 02:52:54.885 [main] INFO  org.apache.commons.logging.Log - ----------Count of booking 0----------
+2021-52-16 02:52:55.374 [main] INFO  org.apache.commons.logging.Log - ---------- GetBookings by lastname----------
+2021-52-16 02:52:55.387 [main] INFO  org.apache.commons.logging.Log - ----------Count of booking 0----------
+2021-53-16 02:53:19.416 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:19.421 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ GetBooking with id $$$$$$$$$$
+2021-53-16 02:53:19.959 [main] INFO  org.apache.commons.logging.Log - ----------Response : 
+{
+    "firstname": "Harry",
+    "lastname": "Potter",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
+}----------
+2021-53-16 02:53:19.959 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$ GetBooking with id $$$$$$$$$$
+2021-53-16 02:53:19.959 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:20.506 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-53-16 02:53:36.162 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-53-16 02:53:36.167 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:36.167 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  Partial update booking details  $$$$$$$$$$
+2021-53-16 02:53:36.708 [main] INFO  org.apache.commons.logging.Log - ---------- Response : ----------
+2021-53-16 02:53:36.711 [main] INFO  org.apache.commons.logging.Log - ----------{
+    "firstname": "Sherry",
+    "lastname": "Trotller",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
+}----------
+2021-53-16 02:53:36.711 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  Partial update booking details completed  $$$$$$$$$$
+2021-53-16 02:53:36.712 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:37.256 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-53-16 02:53:38.786 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-53-16 02:53:38.787 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:38.787 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  Partial update booking details  $$$$$$$$$$
+2021-53-16 02:53:39.288 [main] INFO  org.apache.commons.logging.Log - ---------- Response : ----------
+2021-53-16 02:53:39.289 [main] INFO  org.apache.commons.logging.Log - ----------{
+    "firstname": "Carry",
+    "lastname": "High",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
+}----------
+2021-53-16 02:53:39.290 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  Partial update booking details completed  $$$$$$$$$$
+2021-53-16 02:53:39.290 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:39.811 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-53-16 02:53:41.315 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-53-16 02:53:41.315 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:41.315 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  Partial update booking details  $$$$$$$$$$
+2021-53-16 02:53:41.824 [main] INFO  org.apache.commons.logging.Log - ---------- Response : ----------
+2021-53-16 02:53:41.831 [main] INFO  org.apache.commons.logging.Log - ----------{
+    "firstname": "Carry",
+    "lastname": "Trotller",
+    "totalprice": 332,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
+}----------
+2021-53-16 02:53:41.832 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  Partial update booking details completed  $$$$$$$$$$
+2021-53-16 02:53:41.832 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:42.343 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-53-16 02:53:43.969 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-53-16 02:53:43.970 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:43.971 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  Partial update booking details  $$$$$$$$$$
+2021-53-16 02:53:44.460 [main] INFO  org.apache.commons.logging.Log - ---------- Response : ----------
+2021-53-16 02:53:44.461 [main] INFO  org.apache.commons.logging.Log - ----------{
+    "firstname": "Carry",
+    "lastname": "Trotller",
+    "totalprice": 111,
+    "depositpaid": false,
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
+}----------
+2021-53-16 02:53:44.461 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  Partial update booking details completed  $$$$$$$$$$
+2021-53-16 02:53:44.461 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:44.960 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-53-16 02:53:46.449 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-53-16 02:53:46.450 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:46.450 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  Partial update booking details  $$$$$$$$$$
+2021-53-16 02:53:46.951 [main] INFO  org.apache.commons.logging.Log - ---------- Response : ----------
+2021-53-16 02:53:46.951 [main] INFO  org.apache.commons.logging.Log - ----------{
+    "firstname": "Terry",
+    "lastname": "Low",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
+}----------
+2021-53-16 02:53:46.951 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  Partial update booking details completed  $$$$$$$$$$
+2021-53-16 02:53:46.951 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:47.472 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
+2021-53-16 02:53:48.497 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:48.497 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  Partial update booking details  $$$$$$$$$$
+2021-53-16 02:53:48.986 [main] INFO  org.apache.commons.logging.Log - ---------- Response : ----------
+2021-53-16 02:53:48.987 [main] INFO  org.apache.commons.logging.Log - ----------{
+    "firstname": "Tommy",
+    "lastname": "Trotller",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
+}----------
+2021-53-16 02:53:48.987 [main] INFO  org.apache.commons.logging.Log - $$$$$$$$$$  Partial update booking details completed  $$$$$$$$$$
+2021-53-16 02:53:48.987 [main] INFO  org.apache.commons.logging.Log - ****************************************************************************************
+2021-53-16 02:53:49.476 [main] INFO  org.apache.commons.logging.Log - ----------User Token Authorized----------
