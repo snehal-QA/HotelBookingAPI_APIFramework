@@ -8,15 +8,17 @@ Feature: Retreives all bookings for user based on provided parameters
     When User access getbookings endpoint to search booking using "<parameter>" and "<value>"
     Then the response code is 200
     And countofbookings is ">" 0
+    When user hits GetBooking endpoint with id
+    And response contains following values
+      | <parameter> | <value> |
     Examples: 
       | parameter                           | value                             |
       | firstname                           | TGeo                              |
-      #| lastname                            | IHanks                            |
-      #| checkin                             | 2019-12-26                        |
-      #| checkout                            | 2019-12-29                        |
-      #| firstname&lastname                  | TGeo&IHanks                       |
-      #| checkin&checkout                    | 2019-12-26&2019-12-29             |
-      #| firstname&lastname&checkin&checkout | TGeo&IHanks&2019-12-26&2019-12-29 |
+      | lastname                            | IHanks                            |
+      | checkin                             | 2019-12-26                        |
+      | checkout                            | 2019-12-29                        |
+      | firstname&lastname                  | TGeo&IHanks                       |
+      | checkin&checkout                    | 2019-12-26&2019-12-29             |
 
   @Regression
   Scenario: User calls a webservice to get all booking ids
@@ -29,11 +31,10 @@ Feature: Retreives all bookings for user based on provided parameters
     When User access getbookings endpoint to search booking using "<parameter>" and "<value>"
     Then the response code is 200
     And countofbookings is "=" 0
-
     Examples: 
       | parameter                           | value                               |
       | firstname                           | AAAAA                               |
       | lastname                            | eeeBrown                            |
-      #| firstname&lastname                  | Tim23&Brown12                       |
-      #| checkin&checkout                    | 2007-01-01&2008-01-01               |
-      #| firstname&lastname&checkin&checkout | Jittm&Brttown&2018-01-01&2019-01-01 |
+      | firstname&lastname                  | Tim23&Brown12                       |
+      | checkin&checkout                    | 2007-01-01&2008-01-01               |
+      | firstname&lastname&checkin&checkout | Jittm&Brttown&2018-01-01&2019-01-01 |

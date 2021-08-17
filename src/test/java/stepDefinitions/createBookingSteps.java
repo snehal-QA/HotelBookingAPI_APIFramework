@@ -8,10 +8,12 @@ import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import pojo.requestPayload.createBookingRequest;
 
+
 public class createBookingSteps {
 	
 	Response response;
 	createBookingRequest requestbody;
+	
 	
 	@Given("User enters information {string} {string} {int} {string} {string} {string} {string}")
 	public void user_enters_information(String firstname, String lastname, Integer totalprice
@@ -26,6 +28,7 @@ public class createBookingSteps {
 	public void user_creates_a_booking_using_post_call() {
 		//Calls the Create booking Endpoint from Endpoints.java 
 		response=Endpoints.createBooking(requestbody);
+		
 		GenericResponse_Steps.response=response;
 		log.info("Create Booking Response");
 		log.info(response.asPrettyString());

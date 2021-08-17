@@ -27,8 +27,7 @@ public class generic_Steps {
 		Response response;
 		//Reading the datatable as key:columnname &value:columnvalue
 		 List<Map<String,String>> data = dataTable.asMaps(String.class, String.class);
-		 int i;
-		 for(i=0;i<data.size();i++)
+		 for(int i=0;i<data.size();i++)
 		 {			 
 			 //Create Bookings
 			 requestbody=testDataBuild.createbookingpayload(data.get(i).get("firstname"), data.get(i).get("lastname"), 

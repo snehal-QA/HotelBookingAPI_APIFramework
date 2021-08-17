@@ -57,7 +57,6 @@ public class partialUpdate_Steps {
 			partial_upd_body=objectMapper.writeValueAsString(queryparam);
 		}
 		
-		
 
 	 if(bookingdate.getCheckin() == null && bookingdate.getCheckout() == null ) {
 	
@@ -86,7 +85,7 @@ public class partialUpdate_Steps {
 			response.then().log();
 		 
 	 }
-		System.out.println("&&&&***********         partial response   ************* &&&&\n" + response.asString() );
+		System.out.println("&&&&***********         partial response   ************* &&&&\n" + response.asPrettyString() );
 		
 		GenericResponse_Steps.response=response;
 		log.info(" Response : ");
