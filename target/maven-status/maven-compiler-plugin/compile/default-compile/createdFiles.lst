@@ -1,4 +1,0 @@
-resources\apiResources.class
-pojo\requestPayload\createTokenRequest.class
-pojo\requestPayload\Bookingdates.class
-pojo\requestPayload\createBookingRequest.class

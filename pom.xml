@@ -13,6 +13,7 @@
   <url>http://www.example.com</url>
 
   <properties>
+    <cucumber.version>6.11.0</cucumber.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -81,6 +82,7 @@
     <artifactId>json</artifactId>
     <version>20210307</version>
 </dependency>
+
   </dependencies>
   <build>
     <plugins>
@@ -88,7 +90,34 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
+                <configuration>
+        			<testFailureIgnore>true</testFailureIgnore>
+     			</configuration>
             </plugin>
+				<plugin>
+				    <groupId>net.masterthought</groupId>
+				    <artifactId>maven-cucumber-reporting</artifactId>
+				    <version>5.5.4</version>
+				    <executions>
+				        <execution>
+				            <id>execution</id>
+				            <phase>verify</phase>
+				            <goals>
+				                <goal>generate</goal>
+				            </goals>
+				            <configuration>
+				                <projectName>HotelBooking</projectName>
+				                <!-- output directory for the generated report -->
+				                <outputDirectory>${project.build.directory}/Reports</outputDirectory>
+				                <inputDirectory>${project.build.directory}/Reports</inputDirectory>
+				                <jsonFiles>
+				                    <param>**/cucumber*.json</param>
+				                </jsonFiles>
+				                <!-- <enableFlashCharts>true</enableFlashCharts> -->
+				            </configuration>
+				        </execution>
+				    </executions>
+				</plugin>
     </plugins>         
   </build>
 </project>

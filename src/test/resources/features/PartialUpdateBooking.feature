@@ -7,7 +7,7 @@ Feature: Updates details of the existing bookings
       | Carry     | Trotller |        111 | true        | 2018-01-01 | 2019-01-01 | Breakfast       |
 
   @Regression
-  Scenario Outline: Authorized User calls the webservice to update existing booking
+  Scenario Outline: Authorized User calls the webservice to update existing booking with <parameter>
     Given I am authorized user
     When user updates the booking details "<parameter>" and "<value>"
     Then the response code is 200

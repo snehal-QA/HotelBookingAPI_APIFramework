@@ -7,10 +7,13 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 	tags = "@Regression",
-	features="src/test/java/features",
-	plugin ="html:target/jsonReports/cucumber-report.html"
-	,glue= {"stepDefinitions"}
-	,dryRun = true)
+	features="src/test/resources/features",
+	plugin ={"pretty", "html:target/Reports/cucumber-report.html",
+			 "json:target/Reports/cucumber.json","junit:target/Reports/cucumber.xml"},
+	glue= {"stepDefinitions"},
+	dryRun = false,
+    monochrome = true)
+
 public class RunCucumberTests {
 
 }

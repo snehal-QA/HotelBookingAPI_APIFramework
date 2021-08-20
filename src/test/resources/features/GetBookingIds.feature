@@ -1,7 +1,7 @@
 Feature: Retreives all bookings for user based on provided parameters
 
   @Regression @DeleteTestData
-  Scenario Outline: User calls a webservice to get booking ids with parameters for existing bookings
+  Scenario Outline: User calls a webservice to retrieve booking ids <parameter> with  for existing bookings
     Given we create test data as follows:
       | firstname | lastname | totalprice | depositpaid | checkin    | checkout   | additionalneeds |
       | TGeo      | IHanks   |        111 | true        | 2019-12-26 | 2019-12-29 | Breakfast       |
@@ -27,7 +27,7 @@ Feature: Retreives all bookings for user based on provided parameters
     And countofbookings is ">" 0
   
   @Regression
-  Scenario Outline: User calls a webservice to get booking ids for bookings that do not exist
+  Scenario Outline: User calls a webservice to retreive booking ids with <parameter> for bookings that do not exist
     When User access getbookings endpoint to search booking using "<parameter>" and "<value>"
     Then the response code is 200
     And countofbookings is "=" 0

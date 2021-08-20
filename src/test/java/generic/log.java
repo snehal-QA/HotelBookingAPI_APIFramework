@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 	    // Initialize Log4j logs
 	    static {
-	        String log4jpath=System.getProperty("user.dir")+"/src/test/java/generic/log4j.xml";
+	        String log4jpath=System.getProperty("user.dir")+"/src/test/resources/log4j.xml";
 	        System.setProperty("logoutputpath", System.getProperty("user.dir"));
 	        System.setProperty("log4j.configurationFile",log4jpath);
 	    }

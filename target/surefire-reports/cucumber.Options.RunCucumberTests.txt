@@ -1,4 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: cucumber.Options.RunCucumberTests
 -------------------------------------------------------------------------------
-Tests run: 23, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.409 s - in cucumber.Options.RunCucumberTests
+Tests run: 23, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 50.896 s <<< FAILURE! - in cucumber.Options.RunCucumberTests
+Retreives all bookings for user based on provided parameters.User calls a webservice to retrieve booking ids checkin&checkout with  for existing bookings  Time elapsed: 2.353 s  <<< FAILURE!
+java.lang.AssertionError
+
